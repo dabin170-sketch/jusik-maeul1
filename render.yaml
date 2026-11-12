@@ -1,0 +1,15 @@
+# Render 「Blueprint」 설정 — 저장소를 연결하면 이 내용대로 서버가 만들어져요.
+services:
+  - type: web
+    name: jusik-maeul
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATABASE_URL
+        sync: false        # Neon 등에서 받은 PostgreSQL 주소를 Render 화면에서 직접 붙여 넣어요

@@ -1,0 +1,10 @@
+{
+  "name": "jusik-maeul-server",
+  "version": "1.0.0",
+  "description": "주식마을: 동물들의 월스트리트 — 4인 멀티플레이어 서버",
+  "main": "server.js",
+  "private": true,
+  "scripts": { "start": "node server.js", "test": "node test/server.test.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0", "pg": "^8.13.0" }
+}
